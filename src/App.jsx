@@ -254,7 +254,7 @@ function App() {
                     </li>
                     <li className="intro-contact-list__item">
                       <span className="overhead">Số Điện Thoại</span>
-                      0966501365
+                      0966501***
                     </li>
                   </ul>
                   <ul className="intro-contact-list">
