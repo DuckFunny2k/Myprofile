@@ -1,14 +1,15 @@
 import "../public/assets/css/gird.css";
 import "../public/assets/css/main.css";
 import "../public/assets/css/responsive.css";
-
+import ContactInfo from "./components/ContactInfo/ContactInfo";
 import "../public/assets/font/fontawesome-free-5.15.4-web/css/all.min.css";
-import lottie from "lottie-web";
-import { defineElement } from "lord-icon-element";
 
 import { useEffect } from "react";
 
 // define "lord-icon" custom element with default properties
+import lottie from "lottie-web";
+import { defineElement } from "lord-icon-element";
+
 defineElement(lottie.loadAnimation);
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
 
     const optionElements = $$(".option-item");
     const extendElements = $$(".extend");
-    console.error("Đặng Minh Quân");
+    console.error("Lâm Văn Đức");
 
     optionElements.forEach((option, index) => {
       const extendElement = extendElements[index];
@@ -177,6 +178,10 @@ function App() {
       // Cleanup logic
     };
   }, []);
+
+  const handlePrint = () => {
+    window.print();
+  };
   return (
     <>
       <div className="main">
@@ -245,29 +250,9 @@ function App() {
                     </ul>
                   </div>
                 </div>
+
                 {/* lien he */}
-                <div className="intro-contact">
-                  <ul className="intro-contact-list">
-                    <li className="intro-contact-list__item">
-                      <span className="overhead"> Email </span>
-                      lamducfpt2004@gmail.com
-                    </li>
-                    <li className="intro-contact-list__item">
-                      <span className="overhead">Số Điện Thoại</span>
-                      0966501365
-                    </li>
-                  </ul>
-                  <ul className="intro-contact-list">
-                    <li className="intro-contact-list__item">
-                      <span className="overhead">Ngày Sinh</span>
-                      20/04/200*
-                    </li>
-                    <li className="intro-contact-list__item">
-                      <span className="overhead"> Địa Chỉ </span>
-                      BMT - Đắk Lắk
-                    </li>
-                  </ul>
-                </div>
+                <ContactInfo />
               </div>
             </div>
           </div>
@@ -923,7 +908,7 @@ function App() {
           </div>
         </div>
       </div>
-
+      <button onClick={handlePrint}>In trang</button>
       <div className="circle1"></div>
       <div className="circle2 hide-on-tablet hide-on-mobile"></div>
       <div className="circle3 hide-on-low-pc"></div>
