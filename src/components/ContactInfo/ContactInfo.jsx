@@ -77,9 +77,13 @@ const ContactInfo = () => {
         <li className="intro-contact-list__item">
           <script src="https://cdn.lordicon.com/lordicon.js"></script>
           {isEditing ? (
-            <button className="saveInfo" onClick={handleSaveInfo}>
-              Lưu
-            </button>
+            <lord-icon
+              src="https://cdn.lordicon.com/xsqjakgm.json"
+              trigger="loop"
+              delay="1500"
+              style={{ width: "50px", height: "50px", cursor: "pointer" }}
+              onClick={handleSaveInfo}
+            ></lord-icon>
           ) : (
             <lord-icon
               src="https://cdn.lordicon.com/oqaajvyl.json"
