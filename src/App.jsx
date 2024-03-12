@@ -253,6 +253,7 @@ function App() {
 
                 {/* lien he */}
                 <ContactInfo />
+
               </div>
             </div>
           </div>
