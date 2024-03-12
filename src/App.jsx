@@ -908,8 +908,11 @@ function App() {
             </div>
           </div>
         </div>
+           <button className="printButton" onClick={handlePrint}>
+          In trang
+        </button>
       </div>
-      <button onClick={handlePrint}>In trang</button>
+
       <div className="circle1"></div>
       <div className="circle2 hide-on-tablet hide-on-mobile"></div>
       <div className="circle3 hide-on-low-pc"></div>
